@@ -1,20 +1,44 @@
 % 创建日期：2019‎年‎4‎月‎18‎日，‏‎15:31:24
-\documentclass{ctexbook}
-\usepackage{pifont}
-\usepackage{hyperref}
-\usepackage{ulem}
+% 书籍类型，默认字体大小为15pt，纸张大小为A4，单面打印
+\documentclass[12pt, a4paper, oneside]{ctexbook} 
+% 中文宏包
 \usepackage{ctex}
+% 图文混排，分栏使用了这个宏包
+\usepackage{multicol}
+% 使用\ding{*}命令设置上标
+\usepackage{pifont}
+% 超链接
+\usepackage{hyperref}
+% 使用\uline{*}命令增加下划线，并能自动换行
+\usepackage{ulem}
+\usepackage{CJKulem} 
+% 跨页表格
 \usepackage{longtable}
-\usepackage[perpage]{footmisc} % 脚注每页重新编号
+% 脚注每页重新编号
+\usepackage[perpage]{footmisc} 
+% 页边距
+\usepackage{geometry}
+\geometry{left=2.54cm, right=2.54cm, top=3.18cm, bottom=3.18cm}
+% 行间距
+\linespread{1.5}
 
 \title{\kaishu \Huge 聖經}
 
 % todo 这里添加 前言，序，凡例
 
 \begin{document}
+	
+% 显示标题
+\maketitle
+				
+% 显示目录
+\newpage
+\tableofcontents
+\thispagestyle{empty}   % 不要页眉页脚和页码	
+\newpage
 
-\maketitle				%显示标题
-\tableofcontents		%显示目录
+% 页码从1开始
+\setcounter{page}{1}
 
 \part{\kaishu 旧约}
 
