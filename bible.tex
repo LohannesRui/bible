@@ -1,6 +1,6 @@
 % 创建日期：2019‎年‎4‎月‎18‎日，‏‎15:31:24
-% 书籍类型，默认字体大小为15pt，纸张大小为A4，单面打印
-\documentclass[12pt, a4paper, oneside]{ctexbook} 
+% 书籍类型，默认字体大小为20pt，纸张大小为A4，单面打印
+\documentclass[20pt, a4paper, oneside]{ctexbook} 
 % 中文宏包
 \usepackage{ctex}
 % 图文混排，分栏使用了这个宏包
@@ -18,7 +18,10 @@
 \usepackage[perpage]{footmisc} 
 % 页边距
 \usepackage{geometry}
-\geometry{left=2.54cm, right=2.54cm, top=3.18cm, bottom=3.18cm}
+\usepackage{CJK}
+% 定制页面页眉和页脚
+\usepackage{fancyhdr}
+\geometry{left=2cm, right=2cm, top=2.18cm, bottom=2.18cm}
 % 行间距
 \linespread{1.5}
 
@@ -37,248 +40,497 @@
 \newpage
 % 页码从1开始
 \setcounter{page}{1}
-\part{\kaishu 旧约}
+\part{\kaishu 旧\quad约}
 \newpage
 
+% 页眉
+\pagestyle{fancy}
+% 去掉页眉下划线
+\renewcommand{\headrulewidth}{0pt}
+
 % 新旧约全书总论
+% 自定义目录
+\phantomsection
+\addcontentsline{toc}{chapter}{新旧约全书总论}
 \input{introduction/01_Introduction_to_the_whole_book}
+\clearpage
 % 梅瑟五书引论
+\phantomsection
+\addcontentsline{toc}{chapter}{梅瑟五书引论}
 \input{introduction/02_Introduction_to_the_Pentateuch}
+\clearpage
 
 % 创世纪引言
+\phantomsection
+\addcontentsline{toc}{chapter}{创世纪引言}
 \input{introduction/03_Introduction_to_the_Genesis}
+\clearpage
 % 创世纪（创）
+\phantomsection
+\addcontentsline{toc}{chapter}{创世纪}
 \input{books/01_Genesis}
+\clearpage
 
 % 出谷纪引言
+\phantomsection
+\addcontentsline{toc}{chapter}{出谷纪引言}
 \input{introduction/04_Introduction_to_the_Exodus}
+\clearpage
 % 出谷纪（出）
+\phantomsection
+\addcontentsline{toc}{chapter}{出谷纪}
 \input{books/02_Exodus}
+\clearpage
 
 % 肋未纪引言
+\phantomsection
+\addcontentsline{toc}{chapter}{肋未纪引言}
 \input{introduction/05_Introduction_to_the_Leviticus}
+\clearpage
 % 肋未纪（肋）
+\phantomsection
+\addcontentsline{toc}{chapter}{肋未纪}
 \input{books/03_Leviticus}
+\clearpage
 
 % 户籍纪引言
+\phantomsection
+\addcontentsline{toc}{chapter}{户籍纪引言}
 \input{introduction/06_Introduction_to_the_Numbers}
+\clearpage
 % 户籍纪（户）
+\phantomsection
+\addcontentsline{toc}{chapter}{户籍纪}
 \input{books/04_Numbers}
+\clearpage
 
 % 申命纪引言
+\phantomsection
+\addcontentsline{toc}{chapter}{申命纪引言}
 \input{introduction/07_Introduction_to_the_Deuteronomy}
+\clearpage
 % 申命纪（申）
+\phantomsection
+\addcontentsline{toc}{chapter}{申命纪}
 \input{books/05_Deuteronomy}
+\clearpage
 
 % 若苏厄书（苏）
+\phantomsection
+\addcontentsline{toc}{chapter}{若苏厄书}
 \input{books/06_Joshua}
+\clearpage
 
 % 民长纪（民）
+\phantomsection
+\addcontentsline{toc}{chapter}{民长纪}
 \input{books/07_Judges}
+\clearpage
 
 % 卢德传（卢）
+\phantomsection
+\addcontentsline{toc}{chapter}{卢德传}
 \input{books/08_Ruth}
+\clearpage
 
 % 撒慕尔纪上（撒上）
+\phantomsection
+\addcontentsline{toc}{chapter}{撒慕尔纪上}
 \input{books/09_1_Samuel}
+\clearpage
 
 % 撒慕尔纪下（撒下）
+\phantomsection
+\addcontentsline{toc}{chapter}{撒慕尔纪下}
 \input{books/10_2_Samuel}
+\clearpage
 
 % 列王纪上（列上）
+\phantomsection
+\addcontentsline{toc}{chapter}{列王纪上}
 \input{books/11_1_Kings}
+\clearpage
 
 % 列王纪下（列下）
+\phantomsection
+\addcontentsline{toc}{chapter}{列王纪下}
 \input{books/12_2_Kings}
+\clearpage
 
 % 编年纪上（编上）
+\phantomsection
+\addcontentsline{toc}{chapter}{编年纪上}
 \input{books/13_1_Chronicles}
+\clearpage
 
 % 编年纪下（编下）
+\phantomsection
+\addcontentsline{toc}{chapter}{编年纪下}
 \input{books/14_2_Chronicles}
+\clearpage
 
 % 厄斯德拉上（厄上）
+\phantomsection
+\addcontentsline{toc}{chapter}{厄斯德拉上}
 \input{books/15_Ezra}
+\clearpage
 
 % 厄斯德拉下（厄下）
+\phantomsection
+\addcontentsline{toc}{chapter}{厄斯德拉下（亦称“乃赫米雅”）}
 \input{books/16_Nehemiah}
+\clearpage
 
 % 多俾亚传（多）
+\phantomsection
+\addcontentsline{toc}{chapter}{多俾亚传}
 \input{books/17_Tobit}
+\clearpage
 
 % 友弟德传（友）
+\phantomsection
+\addcontentsline{toc}{chapter}{友弟德传}
 \input{books/18_Judith}
+\clearpage
 
 % 艾斯德尔传（艾）
+\phantomsection
+\addcontentsline{toc}{chapter}{艾斯德尔传}
 \input{books/19_Esther}
+\clearpage
 
 % 玛加伯上（加上）
+\phantomsection
+\addcontentsline{toc}{chapter}{玛加伯上}
 \input{books/20_1_Maccabees}
+\clearpage
 
 % 玛加伯下（加下）
+\phantomsection
+\addcontentsline{toc}{chapter}{玛加伯下}
 \input{books/21_2_Maccabees}
+\clearpage
 
 % 约伯传（约）
+\phantomsection
+\addcontentsline{toc}{chapter}{约伯传}
 \input{books/22_Job}
+\clearpage
 
 % 圣咏集（咏）
+\phantomsection
+\addcontentsline{toc}{chapter}{圣咏集}
 \input{books/23_Psalms}
+\clearpage
 
 % 箴言（箴）
+\phantomsection
+\addcontentsline{toc}{chapter}{箴言}
 \input{books/24_Proverbs}
+\clearpage
 
 % 训道篇（训）
+\phantomsection
+\addcontentsline{toc}{chapter}{训道篇}
 \input{books/25_Ecclesiastes}
+\clearpage
 
 % 雅歌（歌）
+\phantomsection
+\addcontentsline{toc}{chapter}{雅歌}
 \input{books/26_Song_of_Solomon}
+\clearpage
 
 % 智慧篇（智）
+\phantomsection
+\addcontentsline{toc}{chapter}{智慧篇}
 \input{books/27_Wisdom}
+\clearpage
 
 % 德训篇（德）
+\phantomsection
+\addcontentsline{toc}{chapter}{德训篇}
 \input{books/28_Sirach}
+\clearpage
 
 % 依撒意亚（依）
+\phantomsection
+\addcontentsline{toc}{chapter}{依撒意亚}
 \input{books/29_Isaiah}
+\clearpage
 
 % 耶肋米亚（耶）
+\phantomsection
+\addcontentsline{toc}{chapter}{耶肋米亚}
 \input{books/30_Jeremiah}
+\clearpage
 
 % 哀歌（哀）
+\phantomsection
+\addcontentsline{toc}{chapter}{哀歌}
 \input{books/31_Lamentations}
+\clearpage
 
 % 巴路克（巴）
+\phantomsection
+\addcontentsline{toc}{chapter}{巴路克}
 \input{books/32_Baruch}
+\clearpage
 
 % 厄则克耳（则）
+\phantomsection
+\addcontentsline{toc}{chapter}{厄则克耳}
 \input{books/33_Ezekiel}
+\clearpage
 
 % 达尼尔（达）
+\phantomsection
+\addcontentsline{toc}{chapter}{达尼尔}
 \input{books/34_Daniel}
+\clearpage
 
 % 欧瑟亚（欧）
+\phantomsection
+\addcontentsline{toc}{chapter}{欧瑟亚}
 \input{books/35_Hosea}
+\clearpage
 
 % 岳厄尔（岳）
+\phantomsection
+\addcontentsline{toc}{chapter}{岳厄尔}
 \input{books/36_Joel}
+\clearpage
 
 % 亚毛斯（亚）
+\phantomsection
+\addcontentsline{toc}{chapter}{亚毛斯}
 \input{books/37_Amos}
+\clearpage
 
 % 亚北底亚（北）
+\phantomsection
+\addcontentsline{toc}{chapter}{亚北底亚}
 \input{books/38_Obadiah}
+\clearpage
 
 % 约纳（纳）
+\phantomsection
+\addcontentsline{toc}{chapter}{约纳}
 \input{books/39_Jonah}
+\clearpage
 
 % 米该亚（米）
+\phantomsection
+\addcontentsline{toc}{chapter}{米该亚}
 \input{books/40_Micah}
+\clearpage
 
 % 纳鸿（鸿）
+\phantomsection
+\addcontentsline{toc}{chapter}{纳鸿}
 \input{books/41_Nahum}
+\clearpage
 
 % 哈巴谷（哈）
+\phantomsection
+\addcontentsline{toc}{chapter}{哈巴谷}
 \input{books/42_Habakkuk}
+\clearpage
 
 % 索福尼亚（索）
+\phantomsection
+\addcontentsline{toc}{chapter}{索福尼亚}
 \input{books/43_Zephaniah}
+\clearpage
 
 % 哈盖（盖）
+\phantomsection
+\addcontentsline{toc}{chapter}{哈盖}
 \input{books/44_Haggai}
+\clearpage
 
 % 匝加利亚（匝）
+\phantomsection
+\addcontentsline{toc}{chapter}{匝加利亚}
 \input{books/45_Zechariah}
+\clearpage
 
 % 玛拉基亚（拉）
+\phantomsection
+\addcontentsline{toc}{chapter}{玛拉基亚}
 \input{books/46_Malachi}
+\clearpage
 
-\part{\kaishu 新约}
+\part{\kaishu 新\quad约}
 
 % 玛窦福音（玛）
+\phantomsection
+\addcontentsline{toc}{chapter}{玛窦福音}
 \input{books/47_Matthew}
+\clearpage
 
 % 马尔谷福音（谷）
+\phantomsection
+\addcontentsline{toc}{chapter}{马尔谷福音}
 \input{books/48_Mark}
+\clearpage
 
 % 路加福音（路）
+\phantomsection
+\addcontentsline{toc}{chapter}{路加福音}
 \input{books/49_Luke}
+\clearpage
 
 % 若望福音（若）
+\phantomsection
+\addcontentsline{toc}{chapter}{若望福音}
 \input{books/50_John}
+\clearpage
 
 % 宗徒大事录（宗）
+\phantomsection
+\addcontentsline{toc}{chapter}{宗徒大事录}
 \input{books/51_Acts}
+\clearpage
 
 % 罗马书（罗）
+\phantomsection
+\addcontentsline{toc}{chapter}{罗马书}
 \input{books/52_Romans}
+\clearpage
 
 % 格林多前书（格前）
+\phantomsection
+\addcontentsline{toc}{chapter}{格林多前书}
 \input{books/53_1_Corinthians}
+\clearpage
 
 % 格林多后书（格后）
+\phantomsection
+\addcontentsline{toc}{chapter}{格林多后书}
 \input{books/54_2_Corinthians}
+\clearpage
 
 % 迦拉达书（迦）
+\phantomsection
+\addcontentsline{toc}{chapter}{迦拉达书}
 \input{books/55_Galatians}
+\clearpage
 
 % 厄弗所书（弗）
+\phantomsection
+\addcontentsline{toc}{chapter}{厄弗所书}
 \input{books/56_Ephesians}
+\clearpage
 
 % 斐理伯书（斐）
+\phantomsection
+\addcontentsline{toc}{chapter}{斐理伯书}
 \input{books/57_Philippians}
+\clearpage
 
 % 哥罗森书（哥）
+\phantomsection
+\addcontentsline{toc}{chapter}{哥罗森书}
 \input{books/58_Colossians}
+\clearpage
 
 % 得撒洛尼前书（得前）
+\phantomsection
+\addcontentsline{toc}{chapter}{得撒洛尼前书}
 \input{books/59_1_Thessalonians}
+\clearpage
 
 % 得撒洛尼后书（得后）
+\phantomsection
+\addcontentsline{toc}{chapter}{得撒洛尼后书}
 \input{books/60_2_Thessalonians}
+\clearpage
 
 % 弟茂德前书（弟前）
+\phantomsection
+\addcontentsline{toc}{chapter}{弟茂德前书}
 \input{books/61_1_Timothy}
+\clearpage
 
 % 弟茂德后书（弟后）
+\phantomsection
+\addcontentsline{toc}{chapter}{弟茂德后书}
 \input{books/62_2_Timothy}
+\clearpage
 
 % 弟铎书（铎）
+\phantomsection
+\addcontentsline{toc}{chapter}{弟铎书}
 \input{books/63_Titus}
+\clearpage
 
 % 费肋孟书（费）
+\phantomsection
+\addcontentsline{toc}{chapter}{费肋孟书}
 \input{books/64_Philemon}
+\clearpage
 
 % 希伯来书（希）
+\phantomsection
+\addcontentsline{toc}{chapter}{希伯来书}
 \input{books/65_Hebrews}
+\clearpage
 
 % 雅各伯书（雅）
+\phantomsection
+\addcontentsline{toc}{chapter}{雅各伯书}
 \input{books/66_James}
+\clearpage
 
 % 伯多禄前书（伯前）
+\phantomsection
+\addcontentsline{toc}{chapter}{伯多禄前书}
 \input{books/67_1_Peter}
+\clearpage
 
 % 伯多禄后书（伯后）
+\phantomsection
+\addcontentsline{toc}{chapter}{伯多禄后书}
 \input{books/68_2_Peter}
+\clearpage
 
 % 若望一书（若一）
+\phantomsection
+\addcontentsline{toc}{chapter}{若望一书}
 \input{books/69_1_John}
+\clearpage
 
 % 若望二书（若二）
+\phantomsection
+\addcontentsline{toc}{chapter}{若望二书}
 \input{books/70_2_John}
+\clearpage
 
 % 若望三书（若三）
+\phantomsection
+\addcontentsline{toc}{chapter}{若望三书}
 \input{books/71_3_John}
+\clearpage
 
 % 犹达书（犹）
+\phantomsection
+\addcontentsline{toc}{chapter}{犹达书}
 \input{books/72_Jude}
+\clearpage
 
 % 默示录（默）
+\phantomsection
+\addcontentsline{toc}{chapter}{默示录}
 \input{books/73_Revelation}
+\clearpage
 
-\part{附录}
+\part{附\quad录}
 
-% 附录一 天主教基督教圣经目录比较表
-\input{appendix/01_Catholic_Christian_Bible_Directory_Comparison_Table}
+% 附七 天主教基督教圣经目录比较表
+\phantomsection
+\addcontentsline{toc}{chapter}{附七\quad天主教基督教圣经目录比较表}
+\input{appendix/07_Catholic_Christian_Bible_Directory_Comparison_Table}
+\clearpage
 
 \end{document}
