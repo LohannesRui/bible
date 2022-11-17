@@ -1,6 +1,6 @@
 % 创建日期：2019‎年‎4‎月‎18‎日，‏‎15:31:24
-% 书籍类型，默认字体大小为20pt，纸张大小为A4，单面打印
-\documentclass[20pt, a4paper, oneside]{ctexbook} 
+% 书籍类型，默认字体大小为11pt，纸张大小为A5，单面打印
+\documentclass[11pt, a5paper, oneside]{ctexbook} 
 % 中文宏包
 \usepackage{ctex}
 % 图文混排，分栏使用了这个宏包
@@ -21,32 +21,63 @@
 \usepackage{CJK}
 % 定制页面页眉和页脚
 \usepackage{fancyhdr}
-\geometry{left=2cm, right=2cm, top=2.18cm, bottom=2.18cm}
+\geometry{left=1.2cm, right=1cm, top=1.8cm, bottom=0.8cm}
 % 行间距
-\linespread{1.5}
+\linespread{1.3}
 
 \title{\kaishu \Huge 聖經}
-
-% todo 这里添加 前言，序，凡例
 
 \begin{document}
 	
 % 显示标题
 \maketitle
-				
-% 显示目录
-\tableofcontents
 
-\newpage
+% 将页码格式设置为大写罗马数字
+\pagenumbering{Roman}
 % 页码从1开始
 \setcounter{page}{1}
-\part{\kaishu 旧\quad约}
-\newpage
+
+% 前言
+\input{introduction/0_01_Preface}
+\clearpage
 
 % 页眉
 \pagestyle{fancy}
 % 去掉页眉下划线
 \renewcommand{\headrulewidth}{0pt}
+% 中间页眉显示页码
+\chead{\thepage}
+% \chapter 页面显示页眉
+\fancypagestyle{plain}{
+	\pagestyle{fancy}
+}
+% 取消页脚
+\cfoot{}
+
+% 序
+\input{introduction/0_02_Order}
+\clearpage
+
+% 凡例
+\input{introduction/0_03_General}
+\clearpage
+
+% 目录
+% 右页眉
+\rhead{}			
+% 显示目录
+\tableofcontents
+
+\newpage
+
+% 将页码格式设置为阿拉伯数字
+\pagenumbering{arabic}
+% 页码从1开始
+\setcounter{page}{1}
+
+\part{\kaishu 旧\quad约}
+
+\newpage
 
 % 新旧约全书总论
 % 自定义目录
