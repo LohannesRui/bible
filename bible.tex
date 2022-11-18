@@ -1,6 +1,10 @@
 % 创建日期：2019‎年‎4‎月‎18‎日，‏‎15:31:24
 % 书籍类型，默认字体大小为11pt，纸张大小为A5，单面打印
 \documentclass[11pt, a5paper, oneside]{ctexbook} 
+
+% TODO	
+% 导入fonts文件夹下的字体，以解决不同操作系统下的字体问题。用到了宋体和楷体，也要考虑加粗字体的问题。也可以参考：https://yangyq.net/2022/05/set-font-in-latex.html
+
 % 中文宏包
 \usepackage{ctex}
 % 图文混排，分栏使用了这个宏包
@@ -21,12 +25,12 @@
 \usepackage{CJK}
 % 定制页面页眉和页脚
 \usepackage{fancyhdr}
-\geometry{left=1.2cm, right=1cm, top=1.8cm, bottom=0.8cm}
+\geometry{left=1.2cm, right=1cm, top=1.6cm, bottom=1cm}
 % 行间距
 \linespread{1.3541667}
 % 设置段间距和行间距相等
 \setlength{\parskip}{0pt}
-
+% 标题
 \title{\kaishu \Huge 聖經}
 
 \begin{document}
@@ -38,10 +42,6 @@
 \pagenumbering{Roman}
 % 页码从1开始
 \setcounter{page}{1}
-
-% 前言
-\input{introduction/0_01_Preface}
-\clearpage
 
 % 页眉
 \pagestyle{fancy}
@@ -55,6 +55,10 @@
 }
 % 取消页脚
 \cfoot{}
+
+% 前言
+\input{introduction/0_01_Preface}
+\clearpage
 
 % 序
 \input{introduction/0_02_Order}
